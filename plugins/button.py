@@ -1,9 +1,9 @@
 import pyrogram
 
 from plugins.Zee5_dl import zee5_execute
-from pyrogram import Client as Mai_bOTs
+from pyrogram import Client as Compass_Botz
 
-@Mai_bOTs.on_callback_query()
+@Compass_Botz.on_callback_query()
 async def formatbuttons(bot, update):
        
     if "|" in update.data:
