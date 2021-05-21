@@ -1,7 +1,7 @@
 class Translation(object):
     START_TEXT = """<b>Hey! {}\nI'm A Simple File Renamer+File To Video Converter Bot With Permanent Thumbnail support!⚡</b>
 
-<b>Bot Maintained By: <a href="https://telegram.dog/dlaize"> Mr. Dlaize</a></b>\ n 
+<b>Bot Maintained By: <a href='https://telegram.dog/dlaize'> Mr. Dlaize</a></b>\ n 
 <b> I Can Also Download/Upload Files From Zee5</b> \n
 <b>Do /help for more Details ...</b>
 """
@@ -15,7 +15,7 @@ class Translation(object):
     RCHD_TG_API_LIMIT = "Downloaded in {} seconds.\nDetected File Size: {}\nSorry Do You Think! I'll Upload It?"
     AFTER_SUCCESSFUL_UPLOAD_MSG = "<b>Thank you for Using Me SHARE > ⚡</b>"
     AFTER_SUCCESSFUL_UPLOAD_MSG_WITH_TS = "Downloaded in {} seconds.\nUploaded in {} seconds"
-    NOT_AUTH_USER_TEXT = "CONTACT : <a href="https://telegram.dog/dlaize"> Mr. Dlaize</a>"
+    NOT_AUTH_USER_TEXT = "CONTACT : <a href='https://telegram.dog/dlaize'> Mr. Dlaize</a>"
     NOT_AUTH_USER_TEXT_FILE_SIZE = "IF You Got This Message You Should Contact Mr. @Dlaize"
     SAVED_CUSTOM_THUMB_NAIL = "<b>Thumbnail Saved ✅ This Is Permanent Until</b> ❌ /delthumb ❌"
     DEL_ETED_CUSTOM_THUMB_NAIL = "Thumbnail Cleared Succesfully🤦"
@@ -59,5 +59,5 @@ class Translation(object):
 <b>⇢ Create Your Own Clone Bot</b>
 ➾ <a href="https://www.heroku.com/deploy?template=https://github.com/dakshkohli23/Sharingan-Rename-Bot">Deploy 🚀</a>
 ───────────────
-<b>Made with Thunder ⚡ by : <a href="https://telegram.dog/dlaize"> Mr. Dlaize</a></b>
+<b>Made with Thunder ⚡ by : <a href='https://telegram.dog/dlaize'> Mr. Dlaize</a></b>
 """
