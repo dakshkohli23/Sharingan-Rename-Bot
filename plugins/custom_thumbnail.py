@@ -14,14 +14,14 @@ else:
 
 from translation import Translation
 from pyrogram import filters
-from pyrogram import Client as MaI_BoTs
+from pyrogram import Client as Compass_Botz
 
 import database.database as sql
 from PIL import Image
 from database.database import *
 
 
-@MaI_BoTs.on_message(filters.photo)
+@Compass_Botz.on_message(filters.photo)
 async def save_photo(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await bot.delete_messages(
@@ -57,7 +57,7 @@ async def save_photo(bot, update):
         )
 
 
-@MaI_BoTs.on_message(filters.command(["delthumb"]))
+@Compass_Botz.on_message(filters.command(["delthumb"]))
 async def delete_thumbnail(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await bot.delete_messages(
@@ -87,7 +87,7 @@ async def delete_thumbnail(bot, update):
     )
 
 
-@MaI_BoTs.on_message(filters.command(["showthumb"]))
+@Compass_Botz.on_message(filters.command(["showthumb"]))
 async def show_thumb(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await bot.delete_messages(
