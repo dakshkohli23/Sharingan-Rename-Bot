@@ -28,7 +28,7 @@ from helper_funcs.help_Nekmo_ffmpeg import take_screen_shot
 from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import InlineKeyboardMarkup
 from pyrogram.errors import UserNotParticipant, UserBannedInChannel 
-from pyrogram import Client as Mai_bOTs 
+from pyrogram import Client as Compass_Botz 
 
 from hachoir.metadata import extractMetadata
 from hachoir.parser import createParser
@@ -36,7 +36,7 @@ from hachoir.parser import createParser
 from PIL import Image
 
 
-@Mai_bOTs.on_message(pyrogram.filters.command(["c2v"]))
+@Compass_Botz.on_message(pyrogram.filters.command(["c2v"]))
 async def convert_to_video(bot, update):
     update_channel = Config.UPDATE_CHANNEL
     if update_channel:
