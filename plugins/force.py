@@ -20,14 +20,14 @@ from translation import Translation
 
 import pyrogram
 from pyrogram import filters
-from pyrogram import Client as Mai_bOTs
+from pyrogram import Client as Compass_Botz
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 from pyrogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant, UserBannedInChannel 
 
 
-@Mai_bOTs.on_message(pyrogram.filters.command(["start"]))
+@Compass_Botz.on_message(pyrogram.filters.command(["start"]))
 async def text(bot, update):
     if update.from_user.id in Config.BANNED_USERS:
         await update.reply_text("You are Banned")
@@ -53,12 +53,12 @@ async def text(bot, update):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('Support Channel', url='https://t.me/Mai_bOTs'),
-                    InlineKeyboardButton('Feedback', url='https://t.me/No_OnE_Kn0wS_Me')
+                    InlineKeyboardButton('Support Channel', url='https://t.me/Compass_Botz'),
+                    InlineKeyboardButton('Feedback', url='https://t.me/Dlaize')
                 ],
                 [
-                    InlineKeyboardButton('Other Bots', url='https://t.me/Mai_bOTs/17'),
-                    InlineKeyboardButton('Source', url='https://github.com/No-OnE-Kn0wS-Me/FileRenameBot')
+                    InlineKeyboardButton('Anime Index', url='https://t.me/Cartoon_Seriesz'),
+                    InlineKeyboardButton('Source', url='https://github.com/dakshkohli23/Sharingan-Rename-Bot')
                 ]
             ]
         ),
