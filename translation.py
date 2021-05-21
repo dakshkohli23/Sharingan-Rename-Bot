@@ -1,7 +1,7 @@
 class Translation(object):
     START_TEXT = """<b>Hey! {}\nI'm A Simple File Renamer+File To Video Converter Bot With Permanent Thumbnail support!⚡</b>
 
-<b>Bot Maintained By: <a href="https://telegram.me/dlaize"><i> Mr. Dlaize</i></a></b> \n 
+<b>Bot Maintained By: @Dlaize</b> \n 
 <b>I Can Also Download/Upload Files From Zee5</b> \n
 <b>Do /help for more Details ...</b>
 """
@@ -59,5 +59,5 @@ class Translation(object):
 <b>⇢ Create Your Own Clone Bot</b>
 ➾ <a href="https://www.heroku.com/deploy?template=https://github.com/dakshkohli23/Sharingan-Rename-Bot">Deploy 🚀</a>
 ───────────────
-<b>Made with Thunder ⚡ by : <a href="https://telegram.me/dlaize"> Mr. Dlaize</a></b>
+<b>Made with Thunder ⚡ by : @Dlaize</b>
 """
