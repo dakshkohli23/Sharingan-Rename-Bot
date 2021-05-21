@@ -12,6 +12,7 @@ import time
 import shutil
 import random
 import ffmpeg
+import ffmpeg-python
 import asyncio
 import requests
 
@@ -24,7 +25,7 @@ from translation import Translation
 from database.database import *
 
 from pyrogram import filters
-from pyrogram import Client as MaI_BoTs
+from pyrogram import Client as Compass_Botz
 from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 from hachoir.metadata import extractMetadata
@@ -40,7 +41,7 @@ from helper_funcs.display_progress import DownLoadFile
 
 
 
-@MaI_BoTs.on_message(filters.private & filters.regex(pattern=".*http.*"))
+@Compass_Botz.on_message(filters.private & filters.regex(pattern=".*http.*"))
 async def zee5_capture(bot, update):
 
     if update.from_user.id in Config.BANNED_USERS:
