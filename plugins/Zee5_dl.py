@@ -12,7 +12,6 @@ import time
 import shutil
 import random
 import ffmpeg
-import ffmpeg-python
 import asyncio
 import requests
 
