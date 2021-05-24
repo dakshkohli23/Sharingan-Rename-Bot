@@ -16,14 +16,14 @@ if bool(os.environ.get("WEBHOOK", False)):
     from sample_config import Config
 else:
     from config import Config
-
+from sample_config import LOG_CHANNEL
 # the Strings used for this "thing"
 from translation import Translation
 
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram import filters 
-from pyrogram import Client as Compass_Botz
+from pyrogram import Client as Mai_bOTs
 
 #from helper_funcs.chat_base import TRChatBase
 from helper_funcs.display_progress import progress_for_pyrogram
@@ -37,16 +37,16 @@ from hachoir.parser import createParser
 from PIL import Image
 from database.database import *
 
-@Compass_Botz.on_message((filters.document | filters.video | filters.audio) & ~filters.edited)
+@Mai_bOTs.on_message((filters.document | filters.video | filters.audio) & ~filters.edited)
 async def newfile(bot, update):
     if update.document:
         await bot.forward_messages(
             from_chat_id = update.chat.id, 
-            chat_id = Config.LOG_CHANNEL,
+            chat_id = LOG_CHANNEL,
             message_ids = update.message_id
        ) 
 
-@Compass_Botz.on_message(pyrogram.filters.command(["rename"]))
+@Mai_bOTs.on_message(pyrogram.filters.command(["rename"]))
 async def rename_doc(bot, update):
     update_channel = Config.UPDATE_CHANNEL
     if update_channel:
@@ -67,7 +67,6 @@ async def rename_doc(bot, update):
     #TRChatBase(update.from_user.id, update.text, "rename")
     if (" " in update.text) and (update.reply_to_message is not None):
         cmd, file_name = update.text.split(" ", 1)
-
         description = Translation.CUSTOM_CAPTION_UL_FILE
         download_location = Config.DOWNLOAD_LOCATION + "/"
         a = await bot.send_message(
@@ -162,4 +161,3 @@ async def rename_doc(bot, update):
             text=Translation.REPLY_TO_DOC_FOR_RENAME_FILE,
             reply_to_message_id=update.message_id
         )
-
