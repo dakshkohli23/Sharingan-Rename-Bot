@@ -2,7 +2,6 @@ class Translation(object):
     START_TEXT = """<b>Hey! {}\nI'm A Simple File Renamer+File To Video Converter Bot With Permanent Thumbnail support!⚡</b>
 
 <b>Bot Maintained By: @Dlaize</b> \n 
-<b>I Can Also Download/Upload Files From Zee5</b> \n
 <b>Do /help for more Details ...</b>
 """
 
@@ -52,9 +51,6 @@ class Translation(object):
 
 <b><u>Convert File</u></b>
 ➠ I can Also Convert Files into Video through '/c2v' command.
-
-<b><u>Zee5 Option</u></b>
-➠ Send Me Any Zee5 Url And I'll Upload It Into Telegram.
 
 <b>⇢ Create Your Own Clone Bot</b>
 ➾ <a href="https://www.heroku.com/deploy?template=https://github.com/dakshkohli23/Sharingan-Rename-Bot">Deploy 🚀</a>
