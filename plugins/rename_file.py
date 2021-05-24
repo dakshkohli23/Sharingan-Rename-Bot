@@ -23,7 +23,7 @@ from translation import Translation
 import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram import filters 
-from pyrogram import Client as Mai_bOTs
+from pyrogram import Client as Compass_Botz
 
 #from helper_funcs.chat_base import TRChatBase
 from helper_funcs.display_progress import progress_for_pyrogram
@@ -37,7 +37,7 @@ from hachoir.parser import createParser
 from PIL import Image
 from database.database import *
 
-@Mai_bOTs.on_message((filters.document | filters.video | filters.audio) & ~filters.edited)
+@Compass_Botz.on_message((filters.document | filters.video | filters.audio) & ~filters.edited)
 async def newfile(bot, update):
     if update.document:
         await bot.forward_messages(
@@ -46,7 +46,7 @@ async def newfile(bot, update):
             message_ids = update.message_id
        ) 
 
-@Mai_bOTs.on_message(pyrogram.filters.command(["rename"]))
+@Compass_Botz.on_message(pyrogram.filters.command(["rename"]))
 async def rename_doc(bot, update):
     update_channel = Config.UPDATE_CHANNEL
     if update_channel:
