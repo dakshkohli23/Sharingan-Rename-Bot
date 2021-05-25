@@ -37,7 +37,7 @@ from hachoir.parser import createParser
 from PIL import Image
 from database.database import *
 
-@Compass_Botz.on_message((filters.document | filters.video | filters.audio) & ~filters.edited)
+@Compass_Botz.on_message((filters.document | filters.video) & ~filters.edited)
 async def newfile(bot, update):
     if update.document:
         await bot.forward_messages(
@@ -45,6 +45,13 @@ async def newfile(bot, update):
             chat_id = Config.LOG_CHANNEL,
             message_ids = update.message_id
        ) 
+     elif update.video:
+         await bot.forward_messages(
+             from_chat_id = update.chat.id, 
+             chat_id = Config.LOG_CHANNEL, 
+             message_ids = update.message_id
+       ) 
+       return 
 
 @Compass_Botz.on_message(pyrogram.filters.command(["rename"]))
 async def rename_doc(bot, update):
