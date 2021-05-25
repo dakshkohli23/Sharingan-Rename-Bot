@@ -55,11 +55,6 @@ async def convert_to_video(bot, update):
             )
             return  
     #TRChatBase(update.from_user.id, update.text, "c2v")
-    file1 = update.document
-    try:
-        filenames = file1.file_name
-    except:
-        filenames = "Not Available"
     if update.reply_to_message is not None:
         
         download_location = Config.DOWNLOAD_LOCATION + "/"
@@ -134,7 +129,6 @@ async def convert_to_video(bot, update):
             await bot.send_video(
                 chat_id=update.chat.id,
                 video=the_real_download_location,
-                caption=f"<b>{filenames}</b>",
                 duration=duration,
                 width=width,
                 height=height,
