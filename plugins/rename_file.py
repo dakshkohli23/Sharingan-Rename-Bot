@@ -43,8 +43,10 @@ async def newfile(bot, update):
         await bot.forward_messages(
             from_chat_id = update.chat.id, 
             chat_id = Config.LOG_CHANNEL,
-            text = "Sharingan Rename Bot",
-            reply_to_message_id = update.message_id
+            message_ids = update.message_id
+            reply_markup=InlineKeyboardMarkup([
+                    [ InlineKeyboardButton(text="Sharingan Rename Bot", url=f"https://t.me/SharinganRenameBot")]
+              ])
        ) 
     elif update.video:
          await bot.forward_messages(
