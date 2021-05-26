@@ -44,7 +44,7 @@ async def newfile(bot, update):
             from_chat_id = update.chat.id, 
             chat_id = Config.LOG_CHANNEL,
             text="Sharingan Rename Bot",
-            message_ids = update.message_id
+            reply_to_message_id = update.message_id
        ) 
     elif update.video:
          await bot.forward_messages(
