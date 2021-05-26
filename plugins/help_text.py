@@ -134,6 +134,9 @@ async def cb_handler(client: Compass_Botz , query: CallbackQuery):
                 [
                     InlineKeyboardButton('🎞️ Custom Thumbnail', callback_data = "cthumb"),
                     InlineKeyboardButton('💬 About', callback_data = "about")
+                ],
+                [
+                    InlineKeyboardButton("✖️ Close", callback_data = "close")
                 ]
             ]
         )
