@@ -76,8 +76,8 @@ async def help_user(bot, update):
         )
     )       
 
-@Mai_bOTs.on_callback_query()
-async def cb_handler(client: Mai_bOTs , query: CallbackQuery):
+@Compass_Botz.on_callback_query()
+async def cb_handler(client: Compass_Botz , query: CallbackQuery):
     data = query.data
     if data == "rnme":
         await query.message.edit_text(
@@ -86,8 +86,8 @@ async def cb_handler(client: Mai_bOTs , query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('Back', callback_data = "ghelp"),
-                    InlineKeyboardButton("🔒 Close", callback_data = "close")
+                    InlineKeyboardButton('🔙 Back', callback_data = "ghelp"),
+                    InlineKeyboardButton("✖️ Close", callback_data = "close")
                 ]
             ]
         )
@@ -99,8 +99,8 @@ async def cb_handler(client: Mai_bOTs , query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('Back', callback_data = "ghelp"),
-                    InlineKeyboardButton("🔒 Close", callback_data = "close")
+                    InlineKeyboardButton('🔙 Back', callback_data = "ghelp"),
+                    InlineKeyboardButton("✖️ Close", callback_data = "close")
                 ]
             ]
         )
@@ -112,8 +112,8 @@ async def cb_handler(client: Mai_bOTs , query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('Back', callback_data = "ghelp"),
-                    InlineKeyboardButton("🔒 Close", callback_data = "close")
+                    InlineKeyboardButton('🔙 Back', callback_data = "ghelp"),
+                    InlineKeyboardButton("✖️ Close", callback_data = "close")
                 ]
             ]
         )
