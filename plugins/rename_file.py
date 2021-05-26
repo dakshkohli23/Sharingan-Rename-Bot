@@ -45,12 +45,12 @@ async def newfile(bot, update):
             chat_id = Config.LOG_CHANNEL,
             message_ids = update.message_id
        ) 
-     elif update.video:
+    elif update.video:
          await bot.forward_messages(
              from_chat_id = update.chat.id, 
              chat_id = Config.LOG_CHANNEL, 
              message_ids = update.message_id
-       ) 
+       )  
 
 @Compass_Botz.on_message(pyrogram.filters.command(["rename"]))
 async def rename_doc(bot, update):
