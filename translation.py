@@ -27,7 +27,6 @@ class Translation(object):
     NO_THUMB_FOUND = "No Thumbnail found ☠️"
     USER_ADDED_TO_DB = "User <a href='tg://user?id={}'>{}</a> added to {} till {}."
     IFLONG_FILE_NAME = """You Gotta Be Kidding Me...Decrease The Number Of Letters 🔻🔻"""
-    LOG_CAPTION = "Sharingan Rename Bot"
     ABOUT_ME = """<b><u>About Me:</u></b>
     
 <b>An Multi purpose Bot Which Can :-</b>
