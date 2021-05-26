@@ -38,7 +38,7 @@ class Translation(object):
     """
     HELP_USER = """🚨 Oh! You Need Help!
     
-Here are Available Commands!
+Choose Available Commands below!
 
 <b>Made with Thunder ⚡ by : @Dlaize</b>
 
