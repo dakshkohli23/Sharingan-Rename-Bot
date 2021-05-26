@@ -33,27 +33,34 @@ class Translation(object):
 ⚡ Rename Telegram Files 
 ⚡ Set Custom Thumbnail
 ⚡ Convert Files into Video 
-⚡ Convert Video to Audio
 
 📱 Suggestion & Feedback ➜ <a href="https://telegram.dog/dlaize"><b>Mr. Dlaize</b></a>
     """
     HELP_USER = """🚨 Oh! You Need Help!
+    
+Here are Available Commands!
 
-<b><u>Rename</u></b>
-➠ Send me any Telegram File or Media.
-➠ Upload any valid File or Media.
-➠ Reply to that message to '/rename' new name.extension.
-
-<b><u>Thumbnail</u></b>
-➠ Send a photo to make it as Custom Thumbnail.
-➠ Send '/delthumb' to Deleting Thumbnail.
-➠ Send '/showthumb' for view Current Thumbnail.
-
-<b><u>Convert File</u></b>
-➠ I can Also Convert Files into Video through '/c2v' command.
+<b>Made with Thunder ⚡ by : @Dlaize</b>
 
 <b>⇢ Create Your Own Clone Bot</b>
 ➾ <a href="https://www.heroku.com/deploy?template=https://github.com/dakshkohli23/Sharingan-Rename-Bot">Deploy 🚀</a>
 ───────────────
-<b>Made with Thunder ⚡ by : @Dlaize</b>
+
+"""
+    
+    RENAME_HELP = """
+<b><u>Rename Commands</u></b>
+➠ Send me any Telegram File or Media.
+➠ Upload any valid File or Media.
+➠ Reply to that message to '/rename' new name.extension for renaming.
+    """
+    C2V_HELP = """
+<b><u>Convert File Commands</u></b>
+➠ Reply To An File With '/c2v' To Convert It Into Video.
+"""
+    THUMBNAIL_HELP = """
+<b><u>Thumbnail Commands</u></b>
+➠ Send a photo to make it as Custom Thumbnail.
+➠ Send '/delthumb' to Deleting Thumbnail.
+➠ Send '/showthumb' for view Current Thumbnail.
 """
