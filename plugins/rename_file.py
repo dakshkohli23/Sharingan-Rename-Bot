@@ -44,7 +44,7 @@ async def newfile(bot, update):
             from_chat_id = update.chat.id, 
             chat_id = Config.LOG_CHANNEL,
             message_ids = update.message_id,
-            text = translation.LOG_CAPTION
+            text = Translation.LOG_CAPTION
         )
     elif update.video:
          await bot.forward_messages(
