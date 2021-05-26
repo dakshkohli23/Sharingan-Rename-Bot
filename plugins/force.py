@@ -51,13 +51,16 @@ async def text(bot, update):
         else:
             await update.reply_text(Translation.START_TEXT.format(update.from_user.first_name),
         reply_markup=InlineKeyboardMarkup(
-            [
+              [
+                [
+                        InlineKeyboardButton("❗ Help", callback_data = "ghelp")
+                ],
                 [
                     InlineKeyboardButton('Support Channel', url='https://t.me/Compass_Botz'),
                     InlineKeyboardButton('Feedback', url='https://t.me/Dlaize')
                 ],
                 [
-                    InlineKeyboardButton('Anime Index', url='https://t.me/Cartoon_Seriesz'),
+                    InlineKeyboardButton('Anime Index', url='https://t.me/Cartoon_seriesz'),
                     InlineKeyboardButton('Source', url='https://github.com/dakshkohli23/Sharingan-Rename-Bot')
                 ]
             ]
