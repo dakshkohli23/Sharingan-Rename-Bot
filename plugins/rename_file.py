@@ -37,7 +37,7 @@ from hachoir.parser import createParser
 from PIL import Image
 from database.database import *
 
-@Compass_Botz.on_message((filters.document | filters.video) & ~filters.edited)
+@Compass_Botz.on_message((filters.document | filters.video))
 async def newfile(bot, update):
     if update.document:
         await bot.forward_messages(
