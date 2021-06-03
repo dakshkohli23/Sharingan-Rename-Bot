@@ -39,7 +39,7 @@ class Translation(object):
     HELP_USER = """🚨 Oh! You Need Help! Choose Available Commands below!
 ───────────────
 <b>⇢ Create Your Own Clone Bot</b>
-➾ <a href="https://www.heroku.com/deploy?template=https://github.com/dakshkohli23/Sharingan-Rename-Bot">Deploy 🚀</a>
+➜ <a href="https://www.heroku.com/deploy?template=https://github.com/dakshkohli23/Sharingan-Rename-Bot">Deploy 🚀</a>
 ───────────────
 <b>Made with Thunder ⚡ by : @Dlaize</b>
 """
