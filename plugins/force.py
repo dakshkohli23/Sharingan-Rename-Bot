@@ -26,6 +26,9 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant, UserBannedInChannel 
 
+STICKERS = (
+    "CAACAgUAAxkBAAECXWJgtiefn2bNuYvjcasry5Lq-mzdswACRQUAAo8k-yWDStn_vuRiJx8E",
+)
 
 @Compass_Botz.on_message(pyrogram.filters.command(["start"]))
 async def text(bot, update):
@@ -43,6 +46,7 @@ async def text(bot, update):
             #await update.reply_text(f"Join @{update_channel} To Use Me")
             await update.reply_text(
                 text="**Please Join My Update Channel Before Using Me..**",
+                message.reply_sticker(STICKER)
                 reply_markup=InlineKeyboardMarkup([
                     [ InlineKeyboardButton(text="Join My Updates Channel", url=f"https://t.me/{update_channel}")]
               ])
