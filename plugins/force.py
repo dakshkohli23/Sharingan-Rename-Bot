@@ -53,6 +53,7 @@ async def text(bot, update):
             return
         else:
             await update.reply_text(Translation.START_TEXT.format(update.from_user.first_name),
+            message.reply_sticker(sticker),
         reply_markup=InlineKeyboardMarkup(
               [
                 [
@@ -69,6 +70,5 @@ async def text(bot, update):
             ]
         ),
         reply_to_message_id=update.message_id
-        message.reply_sticker(sticker)
     )
             return 
