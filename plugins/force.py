@@ -26,7 +26,7 @@ logging.getLogger("pyrogram").setLevel(logging.WARNING)
 from pyrogram.types import ReplyKeyboardMarkup, InlineKeyboardMarkup, InlineKeyboardButton
 from pyrogram.errors import UserNotParticipant, UserBannedInChannel 
 
-STICKERS = (
+sticker = (
     "CAACAgUAAxkBAAECXWJgtiefn2bNuYvjcasry5Lq-mzdswACRQUAAo8k-yWDStn_vuRiJx8E",
 )
 
@@ -50,7 +50,6 @@ async def text(bot, update):
                     [ InlineKeyboardButton(text="Join My Updates Channel", url=f"https://t.me/{update_channel}")]
               ])
             )
-            message.reply_sticker(STICKER)
             return
         else:
             await update.reply_text(Translation.START_TEXT.format(update.from_user.first_name),
@@ -70,5 +69,6 @@ async def text(bot, update):
             ]
         ),
         reply_to_message_id=update.message_id
+        message.reply_sticker(sticker)
     )
             return 
