@@ -46,11 +46,11 @@ async def text(bot, update):
             #await update.reply_text(f"Join @{update_channel} To Use Me")
             await update.reply_text(
                 text="**Please Join My Update Channel Before Using Me..**",
-                message.reply_sticker(STICKER),
                 reply_markup=InlineKeyboardMarkup([
                     [ InlineKeyboardButton(text="Join My Updates Channel", url=f"https://t.me/{update_channel}")]
               ])
             )
+            message.reply_sticker(STICKER)
             return
         else:
             await update.reply_text(Translation.START_TEXT.format(update.from_user.first_name),
