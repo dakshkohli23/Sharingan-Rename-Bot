@@ -11,8 +11,6 @@ else:
     from config import Config
 
 import pyrogram
-from pyrogram import Client, __version__, idle
-from pyromod import listen
 
 
 
