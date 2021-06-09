@@ -1,7 +1,7 @@
 
 <h1 align="center"><b>Sharingan Rename Bot</b></h1>
 
-<h4 align="center">A Telegram File Renamer Bot With Permanent Thumbnail Support <br> Also It Can Convert Files Into Video & Audio!!</h4>
+<h4 align="center">A Telegram File Renamer Bot With Permanent Thumbnail Support <br> Also It Can Convert Files Into Video!!</h4>
 
 <p align='center'>
   <a href="https://www.python.org/" alt="made-with-python"> <img src="https://img.shields.io/badge/Made%20with-Python-fb3640.svg?style=flat-square&logo=python&logoColor=fb3640&color=fb3640" /> </a>
