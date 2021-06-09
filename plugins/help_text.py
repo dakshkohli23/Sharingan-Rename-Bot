@@ -103,7 +103,6 @@ async def text(bot, update):
             return
         else:
             await update.reply_text(Translation.START_TEXT.format(update.from_user.first_name),
-            await update.reply_sticker(chatid, sticker="CAACAgUAAxkBAAECZ4xgwMFgDJ2Y2VjT-mP8tarDHPllGwACXgUAAo8k-yVXChZTI-azSR8E", quote=True),
         reply_markup=InlineKeyboardMarkup(
               [
                 [
