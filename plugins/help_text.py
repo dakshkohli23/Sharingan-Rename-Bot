@@ -103,7 +103,7 @@ async def text(bot, update):
             return
         else:
             await update.reply_text(Translation.START_TEXT.format(update.from_user.first_name),
-            await update.reply_sticker(sticker="CAACAgUAAxkBAAECZ45gwMX_YfRHLlilVfZkz4t2stbHigACQQIAAgFS-FTRjhCTqR2T-x8E", quote="True")
+            await update.reply_sticker(sticker="CAACAgUAAxkBAAECZ45gwMX_YfRHLlilVfZkz4t2stbHigACQQIAAgFS-FTRjhCTqR2T-x8E", quote="True"),
         reply_markup=InlineKeyboardMarkup(
               [
                 [
