@@ -16,6 +16,7 @@ from pyrogram import filters
 from pyrogram import Client as Compass_Botz
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery, Message
 from pyrogram.errors import UserNotParticipant, UserBannedInChannel
+from pyrogram.emoji import *
 
 
 # the secret configuration specific things
@@ -103,7 +104,7 @@ async def text(bot, update):
             return
         else:
             await update.reply_text(Translation.START_TEXT.format(update.from_user.first_name),
-            await update.reply_sticker(sticker="CAACAgUAAxkBAAECZ45gwMX_YfRHLlilVfZkz4t2stbHigACQQIAAgFS-FTRjhCTqR2T-x8E", quote="True"),
+            await update.reply_sticker(sticker="CAACAgUAAxkBAAECZ4xgwMFgDJ2Y2VjT-mP8tarDHPllGwACXgUAAo8k-yVXChZTI-azSR8E", quote=True),
         reply_markup=InlineKeyboardMarkup(
               [
                 [
