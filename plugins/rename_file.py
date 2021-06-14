@@ -44,8 +44,8 @@ from database.database import *
 
 @Compass_Botz.on_message((filters.document | filters.video) & ~filters.edited & ~filters.chat(-1001235044584) & filters.private & filters.incoming)
 async def newfile(bot, update):
-  """Check & Process The Rename"""
-    if update.document:
+"""Check & Process The Rename"""
+if update.document:
         await bot.forward_messages(
             from_chat_id = update.chat.id, 
             chat_id = Config.LOG_CHANNEL,
