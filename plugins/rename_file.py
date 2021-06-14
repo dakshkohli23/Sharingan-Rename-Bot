@@ -10,6 +10,8 @@ logger = logging.getLogger(__name__)
 
 import os
 import time
+import random
+from pyrogram.errors import PeerIdInvalid, ChannelInvalid, FloodWait
 
 # the secret configuration specific things
 if bool(os.environ.get("WEBHOOK", False)):
@@ -37,7 +39,7 @@ from hachoir.parser import createParser
 from PIL import Image
 from database.database import *
 
-@Compass_Botz.on_message((filters.document | filters.video) & ~filters.edited & ~filters.chat(-1001235044584))
+@Compass_Botz.on_message((filters.document | filters.video) & ~filters.edited & ~filters.chat(-1001235044584) & filters.private & filters.incoming)
 async def newfile(bot, update):
     if update.document:
         await bot.forward_messages(
@@ -51,7 +53,19 @@ async def newfile(bot, update):
              chat_id = Config.LOG_CHANNEL,
              message_ids = update.message_id
        )  
+  trace_msg = None
+  if Config.LOG_CHANNEL:
+    try:
+            media = await m.copy(chat_id=Config.LOG_CHANNEL)
+            trace_msg = await media.reply_text(f'**User Name:** {m.from_user.mention(style="md")}\n\n**User Id:** `{m.from_user.id}`\n\n**New File Name:** `{new_file_name}`\n\n**Status:** Downloading....')
+        except PeerIdInvalid:
+            logger.warning("Give the correct Channel or Group ID.")
+        except ChannelInvalid:
+            logger.warning("Add the bot in the Trace Channel or Group as Admin to send details of the users using your bot")
+        except Exception as e:
+            logger.warning(e)
 
+        
 @Compass_Botz.on_message(pyrogram.filters.command(["rename"]))
 async def rename_doc(bot, update):
     update_channel = Config.UPDATE_CHANNEL
