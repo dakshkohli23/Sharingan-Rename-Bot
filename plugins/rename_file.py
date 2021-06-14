@@ -11,6 +11,9 @@ logger = logging.getLogger(__name__)
 import os
 import time
 import random
+from hachoir.metadata import extractMetadata
+from hachoir.parser import createParser
+from pyrogram.emoji import *
 from pyrogram.errors import PeerIdInvalid, ChannelInvalid, FloodWait
 
 # the secret configuration specific things
