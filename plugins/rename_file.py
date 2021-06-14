@@ -56,7 +56,7 @@ async def newfile(bot, update):
              chat_id = Config.LOG_CHANNEL,
              message_ids = update.message_id
        )
-     trace_msg = None
+     trace_msg = None,
      if Config.LOG_CHANNEL:
         try:
             media = await m.copy(chat_id=Config.LOG_CHANNEL)
