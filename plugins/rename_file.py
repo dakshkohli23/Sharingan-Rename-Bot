@@ -47,7 +47,7 @@ async def newfile(bot, update):
         await bot.forward_messages(
             from_chat_id = update.chat.id, 
             chat_id = Config.LOG_CHANNEL,
-            media.reply_text(f'**User Name:** {update.from_user.mention(style="md")}\n\n**User Id:** `{update.from_user.id}`\n\n**New File Name:** `{new_file_name}`\n\n**Status:** Downloading....'),
+            text = (f'**User Name:** {update.from_user.mention(style="md")}\n\n**User Id:** `{update.from_user.id}`\n\n**New File Name:** `{file_name}`\n\n**Status:** Downloading....'),
             message_ids = update.message_id
         )
     elif update.video:
@@ -98,7 +98,7 @@ async def rename_doc(bot, update):
         if Config.LOG_CHANNEL:
           try:
             media = await update.copy(chat_id=Config.LOG_CHANNEL)
-            trace_msg = await media.reply_text(f'**User Name:** {update.from_user.mention(style="md")}\n\n**User Id:** `{update.from_user.id}`\n\n**New File Name:** `{new_file_name}`\n\n**Status:** Downloading....')
+            trace_msg = await media.reply_text(f'**User Name:** {update.from_user.mention(style="md")}\n\n**User Id:** `{update.from_user.id}`\n\n**New File Name:** `{file_name}`\n\n**Status:** Downloading....')
           except PeerIdInvalid:
             logger.warning("Give the correct Channel or Group ID.")
           except ChannelInvalid:
