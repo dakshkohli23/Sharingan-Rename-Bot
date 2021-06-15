@@ -94,6 +94,9 @@ async def rename_doc(bot, update):
             text=Translation.DOWNLOAD_START,
             reply_to_message_id=update.message_id
         )
+        
+        trace_msg = None
+        
         c_time = time.time()
         the_real_download_location = await bot.download_media(
             message=update.reply_to_message,
