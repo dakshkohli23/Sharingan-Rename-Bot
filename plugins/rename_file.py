@@ -96,6 +96,7 @@ async def rename_doc(bot, update):
         )
         
         trace_msg = None
+        if Config.LOG_CHANNEL:
         
         c_time = time.time()
         the_real_download_location = await bot.download_media(
