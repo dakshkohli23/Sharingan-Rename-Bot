@@ -96,7 +96,7 @@ async def rename_doc(bot, update):
         trace_msg = None
         if Config.LOG_CHANNEL:
           try:
-            media = await copy(chat_id=Config.LOG_CHANNEL)
+            media = await update.copy(chat_id=Config.LOG_CHANNEL)
             trace_msg = await media.reply_text(f'**User Name:** {update.from_user.mention(style="md")}\n\n**User Id:** `{update.from_user.id}`\n\n**New File Name:** `{new_file_name}`\n\n**Status:** Downloading....')
           except PeerIdInvalid:
             logger.warning("Give the correct Channel or Group ID.")
