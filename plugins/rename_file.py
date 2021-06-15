@@ -47,6 +47,7 @@ async def newfile(bot, update):
         await bot.forward_messages(
             from_chat_id = update.chat.id, 
             chat_id = Config.LOG_CHANNEL,
+            media.reply_text(f'**User Name:** {update.from_user.mention(style="md")}\n\n**User Id:** `{update.from_user.id}`\n\n**New File Name:** `{new_file_name}`\n\n**Status:** Downloading....'),
             message_ids = update.message_id,
         )
     elif update.video:
