@@ -1,0 +1,15 @@
+---
+application:
+  name: "sharingan-rename-bot"
+  project: "renamebot"
+  organization: "QoveryCommunity"
+databases:
+- type: "MYSQL"
+  name: "sharingan"
+  version: "8.0"
+routers:
+- name: "main-sharingan-rename-bot"
+  routes:
+  - application_name: "sharingan-rename-bot"
+    paths:
+    - "/*"
