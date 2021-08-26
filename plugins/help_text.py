@@ -65,12 +65,12 @@ async def help_user(bot, update):
         reply_markup=InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('📝Rename', callback_data = "rnme"),
-                    InlineKeyboardButton('📂File To Video', callback_data = "f2v")
+                    InlineKeyboardButton('📝 Rename', callback_data = "rnme"),
+                    InlineKeyboardButton('📂 File To Video', callback_data = "f2v")
                 ],
                 [
-                    InlineKeyboardButton('🎞️Custom Thumbnail', callback_data = "cthumb"),
-                    InlineKeyboardButton('💬About', callback_data = "about")
+                    InlineKeyboardButton('🎞️ Custom Thumbnail', callback_data = "cthumb"),
+                    InlineKeyboardButton('‼️ About', callback_data = "about")
                 ],
                 [
                     InlineKeyboardButton("✖️ Close", callback_data = "close")
@@ -109,12 +109,12 @@ async def text(bot, update):
                         InlineKeyboardButton("❗ Help", callback_data = "ghelp")
                 ],
                 [
-                    InlineKeyboardButton('Support Channel', url='https://t.me/Compass_Botz'),
-                    InlineKeyboardButton('Feedback', url='https://t.me/Dlaize')
+                    InlineKeyboardButton('🏆 Support Channel', url='https://t.me/Compass_Botz'),
+                    InlineKeyboardButton('💬 Feedback', url='https://t.me/Dlaize')
                 ],
                 [
-                    InlineKeyboardButton('Anime Index', url='https://t.me/Cartoon_seriesz'),
-                    InlineKeyboardButton('Source', url='https://github.com/dakshkohli23/Sharingan-Rename-Bot')
+                    InlineKeyboardButton('🍬 Anime Index', url='https://t.me/Cartoon_seriesz'),
+                    InlineKeyboardButton('⌨️ Source', url='https://github.com/dakshkohli23/Sharingan-Rename-Bot')
                 ]
             ]
         ),
@@ -177,7 +177,7 @@ async def cb_handler(client: Compass_Botz , query: CallbackQuery):
                 ],
                 [
                     InlineKeyboardButton('🎞️ Custom Thumbnail', callback_data = "cthumb"),
-                    InlineKeyboardButton('💬 About', callback_data = "about")
+                    InlineKeyboardButton('‼️ About', callback_data = "about")
                 ],
                 [
                     InlineKeyboardButton("✖️ Close", callback_data = "close")
