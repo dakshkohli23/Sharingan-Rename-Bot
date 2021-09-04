@@ -22,11 +22,9 @@
 ## Multipurpose Bot 
 
 An Multi purpose Bot Which Can :-
-* ⚡ Rename Telegram Files 
-* ⚡ Convert Files into Video 
-* ⚡ Convert Video to Audio
-
-
+⚡ Rename Telegram Files 
+⚡ Convert Files into Video 
+⚡ Convert Video to Audio
 
 ### 🚀 Heroku Deploy
 
