@@ -111,10 +111,6 @@ async def text(bot, update):
                 [
                     InlineKeyboardButton('🏆 Support Channel', url='https://t.me/Compass_Botz'),
                     InlineKeyboardButton('💬 Feedback', url='https://t.me/Dlaize')
-                ],
-                [
-                    InlineKeyboardButton('🍬 Anime Index', url='https://t.me/Cartoon_seriesz'),
-                    InlineKeyboardButton('⌨️ Source', url='https://github.com/dakshkohli23/Sharingan-Rename-Bot')
                 ]
             ]
         ),
