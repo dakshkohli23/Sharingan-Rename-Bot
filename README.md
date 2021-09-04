@@ -11,7 +11,7 @@
 <p align="center"><a href="https://github.com/dakshkohli23/Sharingan-Rename-Bot"><img src="https://files.softicons.com/download/culture-icons/sharingan-icons-1.5-by-harenome-razanajato/png/256x256/kakashi.png"></a></p>
 
 <p align="center">
-    <a href="https://github.com/dakshkohli23/Sharingan-Rename-Bot"> <img src="https://img.shields.io/codacy/grade/4d58f2a402b54aed8a7d95f7add45a81?color=fb3640&logo=codacy&logoColor=fb3640&style=for-the-badge" alt="Codacy" /></a>
+    <a href="https://github.com/dakshkohli23/Sharingan-Rename-Bot"> <img src="https://img.shields.io/codacy/grade/4e490514fa374fea87763a055b7ac6fb?color=fb3640&logo=codacy&logoColor=fb3640&style=for-the-badge" alt="Codacy" /></a>
     <a href="https://github.com/dakshkohli23/Sharingan-Rename-Bot"> <img src="https://img.shields.io/github/repo-size/dakshkohli23/Sharingan-Rename-Bot?color=fb3640&logo=github&logoColor=fb3640&style=for-the-badge" /></a>
     <a href="https://github.com/dakshkohli23/Sharingan-Rename-Bot/commits"> <img src="https://img.shields.io/github/last-commit/dakshkohli23/Sharingan-Rename-Bot?color=fb3640&logo=github&logoColor=fb3640&style=for-the-badge" /></a>
     <a href="https://github.com/dakshkohli23/Sharingan-Rename-Bot/issues"> <img src="https://img.shields.io/github/issues/dakshkohli23/Sharingan-Rename-Bot?color=fb3640&logo=github&logoColor=fb3640&style=for-the-badge" /></a>
