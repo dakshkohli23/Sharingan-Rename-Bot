@@ -9,11 +9,7 @@ logger = logging.getLogger(__name__)
 
 import os
 import time
-import random
-from hachoir.metadata import extractMetadata
-from hachoir.parser import createParser
-from pyrogram.emoji import *
-from pyrogram.errors import PeerIdInvalid, ChannelInvalid, FloodWait
+
 
 # the secret configuration specific things
 if bool(os.environ.get("WEBHOOK", False)):
@@ -40,6 +36,7 @@ from hachoir.parser import createParser
 # https://stackoverflow.com/a/37631799/4723940
 from PIL import Image
 from database.database import *
+from database.db import *
 
 @Compass_Botz.on_message((filters.document | filters.video) & ~filters.edited & ~filters.chat(-1001235044584) & filters.private & filters.incoming)
 async def newfile(bot, update):
@@ -55,7 +52,28 @@ async def newfile(bot, update):
              chat_id = Config.LOG_CHANNEL,
              message_ids = update.message_id
        )
-        
+@Compass_Botz.on_message(pyrogram.filters.command(["scaption"]))
+async def set_caption(bot, update):
+    if len(update.command) == 1:
+        await update.reply_text(
+            "Custom Caption \n\n you can use this command to set your own caption  \n\n Usage : /scaption Your caption text \n\n note : For current file name use : <code>{filename}</code>", 
+            quote = True, 
+            reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton('Show Current Caption', callback_data = "shw_caption")      
+                ],
+                [
+                    InlineKeyboardButton('Delete Caption', callback_data = "d_caption")
+                ]
+            ]
+        ) 
+        )
+    else:
+        command, CSTM_FIL_CPTN = update.text.split(' ', 1)
+        await update_cap(update.from_user.id, CSTM_FIL_CPTN)
+        await update.reply_text(f"**--Your Caption--:**\n\n{CSTM_FIL_CPTN}", quote=True) 
+
 @Compass_Botz.on_message(pyrogram.filters.command(["rename"]))
 async def rename_doc(bot, update):
     update_channel = Config.UPDATE_CHANNEL
@@ -87,6 +105,12 @@ async def rename_doc(bot, update):
             return
         description = Translation.CUSTOM_CAPTION_UL_FILE
         download_location = Config.DOWNLOAD_LOCATION + "/"
+        caption_text = await get_caption(update.from_user.id)
+        try:
+           caption_text2 = caption_text.caption.format(filename = file_name)
+        except:
+           caption_text2 =f"<code>{file_name}</code>"
+           pass 
         a = await bot.send_message(
             chat_id=update.chat.id,
             text=Translation.DOWNLOAD_START,
@@ -152,8 +176,11 @@ async def rename_doc(bot, update):
                 chat_id=update.chat.id,
                 document=new_file_name,
                 thumb=thumb_image_path,
-                caption=f"<b>{file_name}</b>",
-                # reply_markup=reply_markup,
+                caption=f"{caption_text2}",
+                parse_mode = "html",
+                reply_markup=InlineKeyboardMarkup([
+                    [ InlineKeyboardButton(text="𝚂ᴜᴘᴘᴏʀᴛ 𝙲ʜᴀɴɴᴇʟ", url=f"https://t.me/Compass_botz")]
+              ]), 
                 reply_to_message_id=update.reply_to_message.message_id,
                 progress=progress_for_pyrogram,
                 progress_args=(
