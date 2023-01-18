@@ -8,22 +8,22 @@ services:
     repo: https://github.com/dakshkohli23/Sharingan-Rename-Bot.git      
     branch: main
     envVars:
-      - key: API_HASH 
+      - key: API_HASH
         sync: false
-      - key: APP_ID 
+      - key: APP_ID
         sync: false
-      - key: AUTH_USERS 
+      - key: AUTH_USERS
         sync: false
-      - key: BANNED_USERS 
+      - key: BANNED_USERS
         sync: false
-      - key: CHUNK_SIZE 
+      - key: CHUNK_SIZE
         sync: false
       - key: LOG_CHANNEL 
         sync: false
-      - key: TG_BOT_TOKEN 
+      - key: TG_BOT_TOKEN
         sync: false
-      - key: UPDATE_CHANNEL 
+      - key: UPDATE_CHANNEL
         sync: false
-        - key: UPDATE_CHANNEL 
+      - key: WEBHOOK
         sync: false
     autoDeploy: false
