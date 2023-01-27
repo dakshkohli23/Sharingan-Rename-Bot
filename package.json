@@ -1,21 +1,73 @@
 {
-   "name": "Sharingan-Rename-Bot",
-   "version": "1.0.0",
-   "description": "",
-   "scripts": {
-       "build": "echo \"No build specified\" && exit 1",
-       "test": "echo \"No test specified\" && exit 1",
-       "start": "node index.js"
+  "name": "Sharingan Rename Bot",
+  "description": "Telegram's best Open Source Rename Bot. Create your Fork now.",
+  "logo": "https://p1.hiclipart.com/preview/401/429/117/sharingan-all-files-mangekyo-sharingan.jpg",
+  "keywords": [
+    "telegram",
+    "best",
+    "open",
+    "source",
+    "Rename"
+  ],
+  "success_url": "https://t.me/cartoon_seriesz",
+  "website": "https://github.com/dakshkohli23",
+  "repository": "https://github.com/dakshkohli23/Sharingan-Rename-Bot",
+  "env": {
+    "WEBHOOK": {
+      "description": "Setting this to ANYTHING will enable webhooks when in env mode",
+      "value": "ANYTHING"
     },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/dakshkohli23/Sharingan-Rename-Bot.git"
+    "TG_BOT_TOKEN": {
+      "description": "Your bot token, as a string.",
+      "value": ""
     },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/dakshkohli23/Sharingan-Rename-Bot/issues"
+    "UPDATE_CHANNEL": {
+      "description": "For Force Subscribe. Paste your Update channel USERNAME (without @).. Also Make The Bot Admin In That Channel!! ",
+      "value": ""
     },
-    "homepage": "https://github.com/dakshkohli23/Sharingan-Rename-Bot#readme"
+    "LOG_CHANNEL": {
+      "description": "For Storing Incoming Files In A Channel Add A channel Username without @ Here!",
+      "value": ""
+    },
+    "APP_ID": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Get this value from https://my.telegram.org",
+      "value": ""
+    },
+    "AUTH_USERS": {
+      "description": "allow only pre-defined users to use this bot",
+      "value": ""
+    },
+    "BANNED_USERS": {
+      "description": "Banned Unwanted members..",
+      "value": "",
+      "required": false
+    },
+    "CHUNK_SIZE": {
+      "description": "chunk size that should be used with requests",
+      "value": "128",
+      "required": false
+    }
+  },
+  "addons": [
+    {
+    "plan": "heroku-postgresql",
+      "options": {
+        "version": "12"
+      }
+    }
+  ],
+  "buildpacks": [
+    {"url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"},
+    {"url": "heroku/python"}
+  ],
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
 }
- 
