@@ -32,7 +32,7 @@ An Multi purpose Bot Which Can :-
 
 ### 🚀 Heroku Deploy
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/dakshkohli23/Sharingan-Rename-Bot)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Darklightning2008/Sharingan-Rename-Bot)
 
 If you Find Any Bugs Or Want to Give Your Feedbacks Then Kindly Contact Us Through [Telegram ](https://telegram.dog/Dlaize) 
 Also Support Our Channel [Compass Bots](https://telegram.dog/compass_botz) 
